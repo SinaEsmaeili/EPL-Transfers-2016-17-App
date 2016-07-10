@@ -19,6 +19,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
     private int var;
     private ListView mListField, mListField2;
+    private TextView mTextListInfo;
 
     Firebase mRef;
     Firebase squadsRef;
@@ -32,12 +33,17 @@ public class ScrollingActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Retrieving on click listener info
         var = getIntent().getIntExtra("variable", 0);
-
 
         mRef = new Firebase("https://premapp-dc8b1.firebaseio.com");
         mListField = (ListView) findViewById(R.id.listView);
         mListField2 = (ListView) findViewById(R.id.listView2);
+
+
+        // Simply setting the info text to white
+        mTextListInfo = (TextView) findViewById(R.id.info);
+        mTextListInfo.setTextColor(Color.WHITE);
 
         switch (var) {
             case 0: setTitle("Arsenal");
@@ -50,7 +56,7 @@ public class ScrollingActivity extends AppCompatActivity {
                 squadsRef = mRef.child("burnley");
                 break;
             case 3: setTitle("Chelsea");
-                squadsRef = mRef.child("chealsea");
+                squadsRef = mRef.child("chelsea");
                 break;
             case 4: setTitle("Crystal Palace");
                 squadsRef = mRef.child("palace");
@@ -121,7 +127,7 @@ public class ScrollingActivity extends AppCompatActivity {
 //
 //        };
 
-        FirebaseListAdapter<String> adapter = new FirebaseListAdapter<String>(this, String.class, R.layout.transfers, squadsRef.child("arrivals")) {
+        FirebaseListAdapter<String> adapter = new FirebaseListAdapter<String>(this, String.class, R.layout.transfers, squadsRef.child("a")) {
 
             @Override
             protected void populateView(View view, String s, int i) {
@@ -135,7 +141,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
         };
 
-        FirebaseListAdapter<String> adapter2 = new FirebaseListAdapter<String>(this, String.class, R.layout.transfers, squadsRef.child("departures")) {
+        FirebaseListAdapter<String> adapter2 = new FirebaseListAdapter<String>(this, String.class, R.layout.transfers, squadsRef.child("d")) {
 
             @Override
             protected void populateView(View view, String s, int i) {
