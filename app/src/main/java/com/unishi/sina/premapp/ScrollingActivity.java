@@ -70,7 +70,7 @@ public class ScrollingActivity extends AppCompatActivity {
             case 9: setTitle("Manchester City");
                 squadsRef = mRef.child("city");
                 break;
-            case 10: setTitle("Manchester United");
+            case 10: setTitle("Manchester Utd");
                 squadsRef = mRef.child("united");
                 break;
             case 11: setTitle("Middlesbrough");
@@ -94,7 +94,7 @@ public class ScrollingActivity extends AppCompatActivity {
             case 17: setTitle("Watford");
                 squadsRef = mRef.child("watford");
                 break;
-            case 18: setTitle("West Bromwich Albion");
+            case 18: setTitle("West Brom");
                 squadsRef = mRef.child("westbrom");
                 break;
             case 19: setTitle("West Ham");
@@ -141,6 +141,7 @@ public class ScrollingActivity extends AppCompatActivity {
             protected void populateView(View view, String s, int i) {
                 TextView textView = (TextView)view.findViewById(R.id.transfer_text1);
                 textView.setText(s);
+                textView.setTextColor(Color.WHITE);
 
                 ImageView imageView = (ImageView)view.findViewById(R.id.transfer_image);
                 imageView.setImageResource(R.drawable.leaving);

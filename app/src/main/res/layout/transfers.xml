@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right|center_vertical"
         android:paddingRight="30dp"
-        android:id="@+id/transfer_image" />
+        android:id="@+id/transfer_image"
+        android:src="@drawable/joined"/>
 
 
 </FrameLayout>
