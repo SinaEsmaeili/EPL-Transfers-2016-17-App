@@ -1,6 +1,7 @@
 package com.unishi.sina.premapp;
 
 import android.database.DataSetObserver;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -126,10 +127,10 @@ public class ScrollingActivity extends AppCompatActivity {
             protected void populateView(View view, String s, int i) {
                 TextView textView = (TextView)view.findViewById(R.id.transfer_text1);
                 textView.setText(s);
+                textView.setTextColor(Color.WHITE);
 
                 ImageView imageView = (ImageView)view.findViewById(R.id.transfer_image);
                 imageView.setImageResource(R.drawable.joined);
-
             }
 
         };
