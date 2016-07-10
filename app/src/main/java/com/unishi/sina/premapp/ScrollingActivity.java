@@ -117,7 +117,6 @@ public class ScrollingActivity extends AppCompatActivity {
         final ProgressBar bar = (ProgressBar) findViewById(R.id.pb);
         bar.setVisibility(View.VISIBLE);
 
-        // Creating the adapter for Firebase to later link to the list view
 //        FirebaseListAdapter<String> adapter = new FirebaseListAdapter<String>(this, String.class, android.R.layout.simple_list_item_1, squadsRef) {
 //            @Override
 //            protected void populateView(View view, String s, int i) {
@@ -127,6 +126,7 @@ public class ScrollingActivity extends AppCompatActivity {
 //
 //        };
 
+        // Creating the adapter for the arrivals list view
         FirebaseListAdapter<String> adapter = new FirebaseListAdapter<String>(this, String.class, R.layout.transfers, squadsRef.child("a")) {
 
             @Override
@@ -141,6 +141,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
         };
 
+        // Creating the adapter for the departures list view
         FirebaseListAdapter<String> adapter2 = new FirebaseListAdapter<String>(this, String.class, R.layout.transfers, squadsRef.child("d")) {
 
             @Override
