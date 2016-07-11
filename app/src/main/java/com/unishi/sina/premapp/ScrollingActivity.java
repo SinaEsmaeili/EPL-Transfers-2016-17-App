@@ -19,7 +19,6 @@ public class ScrollingActivity extends AppCompatActivity {
 
     private int var;
     private ListView mListField, mListField2;
-    private TextView mTextListInfo;
 
     Firebase mRef;
     Firebase squadsRef;
@@ -39,11 +38,6 @@ public class ScrollingActivity extends AppCompatActivity {
         mRef = new Firebase("https://premapp-dc8b1.firebaseio.com");
         mListField = (ListView) findViewById(R.id.listView);
         mListField2 = (ListView) findViewById(R.id.listView2);
-
-
-        // Simply setting the info text to white
-        mTextListInfo = (TextView) findViewById(R.id.info);
-        mTextListInfo.setTextColor(Color.WHITE);
 
         switch (var) {
             case 0: setTitle("Arsenal");
