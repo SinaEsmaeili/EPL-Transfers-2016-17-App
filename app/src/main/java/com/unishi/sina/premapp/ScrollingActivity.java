@@ -19,9 +19,11 @@ public class ScrollingActivity extends AppCompatActivity {
 
     private int var;
     private ListView mListField, mListField2;
+    private ImageView crests;
 
     Firebase mRef;
     Firebase squadsRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,66 +41,88 @@ public class ScrollingActivity extends AppCompatActivity {
         mListField = (ListView) findViewById(R.id.listView);
         mListField2 = (ListView) findViewById(R.id.listView2);
 
+        crests = (ImageView) findViewById(R.id.crest);
+
         switch (var) {
             case 0: setTitle("Arsenal");
                 squadsRef = mRef.child("arsenal");
+                crests.setImageResource(R.drawable.ars);
                 break;
             case 1: setTitle("Bournemouth");
                 squadsRef = mRef.child("bournemouth");
+                crests.setImageResource(R.drawable.bou);
                 break;
             case 2: setTitle("Burnley");
                 squadsRef = mRef.child("burnley");
+                crests.setImageResource(R.drawable.bur);
                 break;
             case 3: setTitle("Chelsea");
                 squadsRef = mRef.child("chelsea");
+                crests.setImageResource(R.drawable.che);
                 break;
             case 4: setTitle("Crystal Palace");
                 squadsRef = mRef.child("palace");
+                crests.setImageResource(R.drawable.cry);
                 break;
             case 5: setTitle("Everton");
                 squadsRef = mRef.child("everton");
+                crests.setImageResource(R.drawable.eve);
                 break;
             case 6: setTitle("Hull City");
                 squadsRef = mRef.child("hull");
+                crests.setImageResource(R.drawable.hul);
                 break;
             case 7: setTitle("Leicester");
                 squadsRef = mRef.child("leicester");
+                crests.setImageResource(R.drawable.lei);
                 break;
             case 8: setTitle("Liverpool");
                 squadsRef = mRef.child("liverpool");
+                crests.setImageResource(R.drawable.liv);
                 break;
             case 9: setTitle("Manchester City");
                 squadsRef = mRef.child("city");
+                crests.setImageResource(R.drawable.cit);
                 break;
             case 10: setTitle("Manchester Utd");
                 squadsRef = mRef.child("united");
+                crests.setImageResource(R.drawable.uni);
                 break;
             case 11: setTitle("Middlesbrough");
                 squadsRef = mRef.child("middlesbrough");
+                crests.setImageResource(R.drawable.mid);
                 break;
             case 12: setTitle("Southampton");
                 squadsRef = mRef.child("southampton");
+                crests.setImageResource(R.drawable.sou);
                 break;
             case 13: setTitle("Stoke");
                 squadsRef = mRef.child("stoke");
+                crests.setImageResource(R.drawable.sto);
                 break;
             case 14: setTitle("Sunderland");
                 squadsRef = mRef.child("sunderland");
+                crests.setImageResource(R.drawable.sun);
                 break;
             case 15: setTitle("Swansea");
                 squadsRef = mRef.child("swansea");
+                crests.setImageResource(R.drawable.swa);
                 break;
             case 16: setTitle("Tottenham");
                 squadsRef = mRef.child("tottenham");
+                crests.setImageResource(R.drawable.tot);
                 break;
             case 17: setTitle("Watford");
                 squadsRef = mRef.child("watford");
+                crests.setImageResource(R.drawable.wat);
                 break;
             case 18: setTitle("West Brom");
                 squadsRef = mRef.child("westbrom");
+                crests.setImageResource(R.drawable.bro);
                 break;
             case 19: setTitle("West Ham");
                 squadsRef = mRef.child("westham");
+                crests.setImageResource(R.drawable.wes);
                 break;
 
         }
