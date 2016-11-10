@@ -1,6 +1,6 @@
 # EPL Transfers 2016/17 Android App
 
-Fun app I made to test out Firebases real time database features.
+App I made to test out Firebases real time database features.
 
 ###### Screenshots
 
